@@ -3,4 +3,4 @@ ports:
     onOpen: open-preview
 tasks:
   - before: if [[ -z "$run" ]]; then cd Projeto-App-Meu-Negocio/Implementacao-Pagar-me/; else cd Projeto-App-Meu-Negocio/Implementacao-Pagar-me/$run; fi
-    command: nvm install 13.3.0 && npm install && npm pagarme
+    command: nvm install 13.3.0 && npm install && npm start
