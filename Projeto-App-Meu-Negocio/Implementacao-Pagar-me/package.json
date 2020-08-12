@@ -1,0 +1,22 @@
+{
+  "name": "implementation-pagar.me",
+  "version": "1.0.0",
+  "description": "a single implementation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit npm run pagarme",
+    "pagarme": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "pagarme": "^4.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

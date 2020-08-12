@@ -1,0 +1,189 @@
+
+
+.diving {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+width: 90%;
+font-weight: bold;
+}
+
+#snackbar {
+  visibility: hidden;
+  width: 95%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 40px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+font-size:30px
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 3s, 1000s;
+  animation: fadein 3s,  1000s;
+}
+
+#snackbar.hide {
+  visibility: visible;
+  -webkit-animation:  fadeout 3s ;
+  animation:  fadeout 3s ;
+}
+
+
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+.ml11 {
+  position: relative;
+  font-weight: 300;
+  font-size: 1.5em;
+  color: #ffffff;
+  }
+
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 1.5em;
+  color: #ffffff;
+  }
+  .ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+  }
+  .ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: green;
+  transform-origin: 0.5 0;
+  }
+  .ml5 .ampersand {
+  font-family: Baskerville, "EB Garamond", serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+  }
+.ml5 .coloring {
+ color: lightgreen;
+ text-decoration:none
+  }
+
+  
+  .ml5 .letters {
+  display: inline-block;
+
+  opacity: 0;
+  }
+  .ml12 {
+  color: #ffffff;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  }
+  .ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
+
+  }
+
+
+  div#scrollmennetwork {
+      overflow: auto;
+      white-space: nowrap;
+    }
+    
+    div#scrollmennetwork a {
+      display: inline-block;
+      padding: 14px;
+    }
+    
+    div#scrollmennetwork a:hover {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    }
+    
+    #lottie0{
+      width:50px;
+      position:relative;
+    }
+    #lottie1{
+      width:50px;
+    }
+    #lottie2{
+      width:50px;
+    }
+    #lottie3{
+      width:200px;
+    }
+
+#pt{
+  width:50px;
+  height:40px;
+  margin:10pt;
+}
+#us{
+   width:50px;
+   height:40px;
+    margin:10pt;
+}
+
+#retorno_json {
+  border: ridge 5px;
+  width: 100%;
+  height: 50px;
+  overflow: auto;
+  word-wrap:break-word
+  }
+  
+  #retorno_json.dataok {
+  border: ridge 5px;
+  width: 100%;
+  height: 2300px;
+  overflow: auto;
+  word-wrap:break-word
+  }
+  
+  #retorno_json.dataerror {
+  border: ridge 5px;
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  word-wrap:break-word
+  }
+  

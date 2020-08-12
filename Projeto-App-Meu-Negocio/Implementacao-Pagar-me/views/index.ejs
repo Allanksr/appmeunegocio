@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_blank">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=10.0, minimum-scale=1, user-scalable=yes' name='viewport'/>
+<meta content='#000000' name='theme-color'/>
+<meta content='Allan Ribas Desenvolvedor' property='og:title'/>
+<meta content='Crie já seu portofólio na web📱' name='description'/>
+<meta content='https://www.allanksr.com/' property='og:url'/>
+<meta content='Allan Ribas Desenvolvedor' property='og:site_name'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<link href='https://www.allanksr.com/' rel='canonical'/>
+<link href='https://lh3.googleusercontent.com/-cCdW6Kno3YM/Xt2q-XPOgYI/AAAAAAAAOGU/PDwNPi0eMqMm_rzjZ5HbtXrsCIwQ0HhGgCLcBGAsYHQ/allan.png' rel='icon' type='image/x-icon'/>
+<meta content='https://lh3.googleusercontent.com/-cCdW6Kno3YM/Xt2q-XPOgYI/AAAAAAAAOGU/PDwNPi0eMqMm_rzjZ5HbtXrsCIwQ0HhGgCLcBGAsYHQ/allan.png' property='og:image'/>
+<title>Allan Ribas DEV</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.2/lottie.js'></script>
+<link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+ <style>
+.imaging{width:50px; padding-right:10px;}
+.imag{width:35px; padding-right:10px;}
+body{
+  background: url(/images/bg-man-computer.png);
+  background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    background-color:#27383e;
+}
+</style>
+
+
+<link rel="stylesheet" type="text/css" href="css/page.css" media="screen" />
+<script src="js/page.js"></script>
+
+  </head>
+  <body>
+    
+    <div align='center'>       
+
+        <h1 class='ml11'>Allan Ribas</h1>
+        <h1 class='ml12'>Desenvolvedor</h1><br/>
+        <h1 class='ml5'>
+        <span class='text-wrapper'>
+        <span class='line line1'></span>
+        <span class='letters letters-left'>Teste de implementação</span>
+        <span class='letters ampersand'>do</span>
+        <span class='letters coloring letters-right'>
+            <a title="Pagar.me" class='coloring' href="https://pagar.me/">Pagar.me</a>
+        </span>
+        <span class='line line2'></span>
+        </span>
+        </h1>
+        </div><br/>
+         <script src="js/anim.js"></script>
+        <div class="divid">
+            <div align='center' id='scrollmennetwork'></div>
+            <script src="js/scrollmennetwork.js"></script>
+        </div>  
+        <br/>
+    <div align="center">
+    <button class="alert alert-success" id="pannel">Através deste painel</button><br />
+    <font id="snackbarTXT"><div style='font-size:30px;' id='snackbar'> </div></font>
+    <div id="changeLanguage">
+        <img title="alterar idioma Português" id="pt" src="images/pt.png">
+        <img title="change idiom English" id="us" src="images/us.png">
+    </div>
+    </div>
+<div align="center">
+<div id="main_container" class="diving">
+  <div class="alert-warning"></div>
+  <input title="Sua Chave TESTE de API do Pagar.me de trinta e oito caracteres" class="form-control" 
+  placeholder="sua Chave de API" type="text"/><br>
+
+  <div title="Metodo de pagamento" class="payment_method"><span class="payment_text">Metodo de pagamento</span>
+    <select id="listen_method" class="alert alert-primary">      
+        <option class="credit">Cartão de crédito</option>
+        <option class="billet">Boleto bancário</option>
+    </select>
+    </div>
+
+<button class="btn btn-outline-primary" id="make_transaction" title="Fazer transação">Fazer transação</button>
+
+
+  <div class="alert-warning"></div>
+  <input title="identificador de uma transação de sete números" class="form-control" 
+  placeholder="número de identificação de uma transação" type="text"/>
+
+    <div title="Identificadores" class="identifier_select">
+        <select class="alert alert-primary" id="purchases_ids">
+            <option>Identificadores</option>
+        </select>
+    </div>
+
+  <button class="btn btn-outline-primary" id="resquest_transaction"  title="Ver uma transação">Ver uma transação</button><br>
+ 
+
+<textarea id="retorno_json"  title="O RETORNO APARECERÁ AQUI!" placeholder="O RETORNO APARECERÁ AQUI!"></textarea>
+<br><br><br><br>
+<a title="Pagar.me" href="https://docs.pagar.me/reference#principios-basicos">
+    <img src="/images/pagar_me.png"/>
+    </a>
+<br><br><br><br><br><br><br><br>
+ <script src="js/define.js"></script>  
+  </div>
+</div>
+  <script>
+     
+    
+       var ml12 = document.getElementsByClassName("ml12")[0]
+       var imptest = document.getElementsByClassName("letters letters-left")[0]
+       var of = document.getElementsByClassName("letters ampersand")[0]
+       var pagarmeurl = document.getElementsByClassName("letters coloring letters-right")[0]
+       var coloring = pagarmeurl.getElementsByClassName("coloring")[0]
+       var pannel = document.getElementById("pannel")
+       var input_class = document.getElementsByClassName("form-control")[0]
+       var input_class1 = document.getElementsByClassName("form-control")[1]
+       var make_transaction = document.getElementById("make_transaction")
+
+
+       var payment_method = document.getElementsByClassName("payment_method")[0]
+       var payment_text = payment_method.getElementsByClassName("payment_text")[0]
+       var select_payment = payment_method.getElementsByClassName("alert alert-primary")[0]
+       var credit = select_payment.getElementsByClassName("credit")[0]
+       var billet = select_payment.getElementsByClassName("billet")[0]
+
+       var identifier_select = document.getElementsByClassName("identifier_select")[0]
+       var selector = identifier_select.getElementsByClassName("alert alert-primary")[0]
+       var resquest_transaction = document.getElementById("resquest_transaction")
+       var retorno_json = document.getElementById("retorno_json")
+
+       var pt = document.getElementById("pt")
+       var us = document.getElementById("us")
+       pt.addEventListener("click", function(){
+        setLanguage('pt')
+       })
+       us.addEventListener("click", function(){
+        setLanguage('us')
+       })
+
+    var ajaxValue
+    var urLocal = window.location.href
+    $.ajax({
+    type: "GET",
+    url: urLocal+"/translated/"+checkLanguage()+".json",
+    dataType: "json",
+    success: function(data) {
+        ml12.innerHTML = data.dev
+        imptest.innerHTML = data.imptest
+        of.innerHTML = data.of
+        coloring.title = data.pagarmeurl
+        coloring.setAttribute("href", "https://pagar.me/")
+        coloring.setAttribute('target', '_blank')
+        pannel.innerHTML = data.through_this_panel
+        input_class.title = data.apiTitle
+        input_class.placeholder = data.you_api_key
+
+        if(getApi("se diferente de zero").length !== 0){
+            input_class.value = getApi("escreva no input")[0]
+        }
+        make_transaction.title = data.make_transaction
+        make_transaction.innerHTML = data.make_transaction
+
+        input_class1.title = data.id_transaction_title
+        input_class1.placeholder = data.id_transaction_placeholder
+        payment_method.title = data.payment_method
+        payment_text.innerHTML = data.payment_method
+        credit.innerHTML = data.credit_card
+        credit.value = data.credit_card_method
+        billet.innerHTML = data.boleto
+        billet.value = data.boleto_method
+        identifier_select.title = data.identifiers
+        selector.innerHTML = "<option>"+data.identifiers+"</option>"
+        resquest_transaction.title = data.view_transaction
+        resquest_transaction.innerHTML = data.view_transaction
+        retorno_json.placeholder = data.return_here
+        retorno_json.title = data.return_here
+        ajaxValue = data
+    }
+  })
+
+ 
+
+let payment_method_option ="credit_card"
+var listen_method = document.getElementById("listen_method")
+listen_method.addEventListener("change",listenChange)
+	function listenChange(event){
+        payment_method_option = event.target.value
+	}
+
+
+var date = new Date()
+    var cardData = new Map()
+    cardData['amount']= 10000
+    cardData['card_number']= "4111111111111111"
+    cardData['card_expiration_date']= '0922'
+    cardData['card_holder_name']= "Morpheus Fishburne"
+    cardData['card_cvv']= "123"
+    cardData['installments']= "1"
+
+    
+
+    cardData['external_id']= "FirebasePUSH"
+    cardData['email']= "mopheus@nabucodonozor.com"
+    cardData['cpf']= "30621143049"
+    cardData['phone_numbers']= ['+5511999998888', '+5511888889999']
+    cardData['country']= "br"
+    cardData['birthday']= "1980-05-15"
+
+    cardData['store_name']='Meu Negócio'
+    cardData['country']= 'br'
+    cardData['state']= "São Paulo"
+    cardData['city']= "Sorocaba"
+    cardData['neighborhood']= "São Paulo"
+    cardData['street']= "Av General Carneiro"
+    cardData['street_number']= "1000"
+    cardData['zipcode']= "17740000"
+
+    cardData['delivery_fee']= 1000
+    cardData['delivery_date']= "10"
+    cardData['expedited']= false
+    cardData['delivery_country']= "br"
+    cardData['delivery_state']= "São Paulo"
+    cardData['delivery_city']= "Presidente Prudente"
+    cardData['delivery_neighborhood']= "Araçatuba"
+    cardData['delivery_street']= "Rua João de souza"
+    cardData['delivery_street_number']= "180"
+    cardData['delivery_zipcode']= "17740000"
+
+    cardData['items']= [
+            {
+                "id":"p01",
+                "title":"Tênis Nike",
+                "unit_price":"10000",
+                "quantity":"5"
+            },
+            {
+                "id":"p02",
+                "title":"Tênis Nike 2",
+                "unit_price":"5000",
+                "quantity":"50"
+            }
+    ]
+    cardData['metadata']= {"data_to_search": "Campo extra", "line_data": "Campo extra"}
+    var retorno_json = document.getElementById("retorno_json")
+
+        make_transaction.addEventListener("click", function(){
+            if (input_class.value.length <= 37) {
+                input_class.setAttribute("placeholder", ajaxValue.apiTitle) 
+                onlyFunctions.myStopFunction()
+                document.getElementById('snackbar').innerHTML = input_class.title
+                document.getElementById('snackbar').className = 'show'
+            }else { 
+
+                cardData['payment_method']= payment_method_option
+                cardData['apikey']= input_class.value        
+                cardData['reference_key']= `${Math.random()}`
+                retorno_json.innerHTML = ""
+                if(getApi("se diferente de zero salvar em cookie")[0].length == 0){
+                    setApi(input_class.value)
+                }           
+                $.ajax({
+                        url: urLocal+'card_transaction',
+                        data: cardData,
+                        type: 'POST',
+                        success: function (data) {   
+                            
+                            if(data[0] !== "error"){
+                                input_class.value = getApi("reescreva no input após transação OK")[0]
+                            retorno_json.innerHTML = JSON.stringify(data[1], null, 4)
+                            retorno_json.className = 'dataok'
+                            setCookie('idpurchase', data[2])
+                            console.log('idPurchaseSaved: ' + data[2] +"\n\n")
+
+                            }else{
+                                console.log('data: ' + data[1] +"\n\n")
+
+                                input_class.value = getApi("reescreva no input após transação Error")[0]
+                                retorno_json.className = 'dataerror'
+                                input_class.setAttribute("placeholder", "sua chave de Api") 
+                              retorno_json.innerHTML = JSON.stringify(data[1], null, 4)+
+                              "\n https://docs.pagar.me/reference#erros "
+                              
+                            }
+                            
+                        },
+                        error: function (xhr, status, error) {
+                            input_class.value = getApi("reescreva no input após erro desconhecido")[0]
+                                retorno_json.className = 'dataerror'
+                                input_class.setAttribute("placeholder", "sua chave de Api") 
+                              retorno_json.innerHTML = error
+                            console.log('Error: ' + error)
+                        },
+                })
+
+                input_class.setAttribute("placeholder", ajaxValue.you_api_key) 
+                input_class.value = ajaxValue.executing_request
+        }
+        
+    })
+
+   
+    var apiKEY = new Map()
+    resquest_transaction.addEventListener("click", function(){
+                if (input_class1.value.length <=6 ) {
+                    input_class1.setAttribute("placeholder", ajaxValue.id_transaction_title) 
+                    onlyFunctions.myStopFunction()
+                        document.getElementById('snackbar').innerHTML = input_class1.title
+                        document.getElementById('snackbar').className = 'show'
+                    }
+               else if (input_class.value.length <= 37) {
+                input_class.setAttribute("placeholder", ajaxValue.you_api_key) 
+                    onlyFunctions.myStopFunction()
+                    document.getElementById('snackbar').innerHTML = input_class.title
+                    document.getElementById('snackbar').className = 'show'
+                       } 
+                    else { 
+                        apiKEY['apikey'] = input_class.value
+                        apiKEY['transaction_id']= input_class1.value
+                        retorno_json.innerHTML = ""
+                    $.ajax({
+                        url: urLocal+'return_transaction',
+                        data: apiKEY ,
+                        type: 'POST',
+                        success: function (data) {                                                           
+                            if(data[0] !== "error"){
+                                input_class.value = getApi("reescreva no input após retorno da transação OK")[0]
+                            retorno_json.innerHTML = JSON.stringify(data[1], null, 4)
+                            retorno_json.className = 'dataok'
+                            }else{
+                                input_class.value = getApi("reescreva no input após retorno da transação Error")[0]
+                                retorno_json.className = 'dataerror'
+                                input_class.setAttribute("placeholder", ajaxValue.you_api_key) 
+                              retorno_json.innerHTML = JSON.stringify(data[1], null, 4)+
+                              "\n https://docs.pagar.me/reference#erros "
+                              
+                            }
+                            
+                        },
+                        error: function (xhr, status, error) {
+                            input_class.value = getApi("reescreva no input após retorno da transação erro desconhecido")[0]
+                                retorno_json.className = 'dataerror'
+                                input_class.setAttribute("placeholder", "sua chave de Api") 
+                              retorno_json.innerHTML = `${error} : ${status} : ${error}`
+                            console.log('Error: ' + error)
+                        },
+                })
+
+                input_class.setAttribute("placeholder", ajaxValue.you_api_key) 
+                input_class.value = ajaxValue.executing_request
+        }
+        
+    })
+
+
+
+
+    setTimeout(function(){
+        checkCookie()
+    }, 1000)
+        function setCookie(cookieKey, cookieValue) {
+            var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)idpurchase\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+            var idPurchase = cookie.split(",")
+            idPurchase.push(cookieValue)
+            document.cookie = cookieKey+"=" + idPurchase
+            console.log("Id das compras efetuadas :",idPurchase)
+            $("#purchases_ids option:last").after($('<option onclick="document.getElementById("input_class1").value='+cookieValue+'" value="'+cookieValue+'">'+cookieValue+'</option>'))
+
+        }
+        checkCookie()
+        function checkCookie() {
+            var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)idpurchase\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+            var idPurchase = cookie.split(",")
+            console.log("Id das compras efetuadas :",idPurchase)
+            for (i = 1; i < idPurchase.length; i++) {
+            $("#purchases_ids option:last").after($('<option value="'+idPurchase[i]+'">'+idPurchase[i]+'</option>'))
+            }
+            purchases_ids.addEventListener("change",changeSpeed)
+        }
+
+        function setApi(cookieKey) {         
+            document.cookie = "apikey=" + cookieKey + ";"
+            console.log("apikeySaving :",cookieKey)
+           
+        }
+        function getApi(reason) {
+            var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)apikey\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+            var apikey = cookie.split(",")
+       
+            console.log(`reason :${reason} - apikey :${apikey}`)
+            return apikey
+        }
+
+        function setLanguage(cookieKey) {         
+            document.cookie = "country=" + cookieKey + ";"
+            console.log("setLanguage :",cookieKey)
+            if (confirm("OK to reload page")) {
+                location.href = urLocal
+                } 
+        }
+        
+        var globalLanguage
+        function checkLanguage() {
+            var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)country\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+            var language = cookie.split(",")
+           
+            if(language[0].length == 0){
+                globalLanguage = "pt"
+            }else{
+                globalLanguage = language[0]
+            }
+            console.log("checkLanguage :", globalLanguage)
+            return globalLanguage
+        }
+        
+        function changeSpeed(event){
+            var transaction_id = document.getElementById("form-control1")
+            transaction_id.value = event.target.value
+        }
+
+    </script>
+   </body>
+</html>
