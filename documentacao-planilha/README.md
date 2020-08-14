@@ -16,3 +16,5 @@
 | :---: | :--- |
 | <img src="https://raw.githubusercontent.com/Allanksr/appmeunegocio/master/documentacao-planilha/imagens/finally.png" width="100"> | **Sendo assim.** **Todos campos são obrigatórios e o campo <a href="https://github.com/Allanksr/appmeunegocio/tree/master/documentacao-planilha#concluindo">productId</a> merce uma atenção especial, pois ele que define o produto na loja** **Os produtos de teste em nosso aplicativo començam no p01 e vão até ao p47** **Seguindo essa lógica quando você criar sua planilha o <a href="https://github.com/Allanksr/appmeunegocio/tree/master/documentacao-planilha#concluindo">productId</a> deve OBRIGATÓRIAMENTE começar em p48 e dai em diante p49, p50, p51 ect...**|<br>
 
+[![Code](https://raw.githubusercontent.com/Allanksr/appmeunegocio/f82a17b23625e8c940ad80a36cbc7412a371915f/documentacao-planilha/imagens/code.svg)](https://github.com/Allanksr/appmeunegocio/tree/master/documentacao-planilha/planilha)<br>
+
