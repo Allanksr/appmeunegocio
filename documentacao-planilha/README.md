@@ -1,4 +1,5 @@
 # Documentação
+[Translate to English](https://github.com/Allanksr/appmeunegocio/blob/master/documentacao-planilha/README-us.md)
 ### Nosso aplicativo em fase de teste conta com vários serviços do Google
 | Serviço | Descrição |
 | :---: | :--- |
