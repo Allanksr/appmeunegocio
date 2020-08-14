@@ -1,4 +1,4 @@
-# Documentção
+# Documentação
 ### Nosso aplicativo em fase de teste conta com vários serviços do Google
 | Serviço | Descrição |
 | :---: | :--- |
